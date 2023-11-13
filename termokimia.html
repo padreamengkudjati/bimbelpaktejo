@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMATIKA 2</title>
+    
+    <style>
+    .header {
+    position:relative;
+    text-align:center;
+    background: linear-gradient(60deg, rgb(168, 5, 5)0%, rgb(255, 0, 0) 100%);
+    color:white;
+    font-family: Lucida Handwriting;
+    font-size:20px;
+    height:50vh;
+    /* navigation bar styling */
+  
+  }
+  .logo {
+    width:50px;
+    fill:white;
+    padding-right:15px;
+    display:inline-block;
+    vertical-align: middle;
+  }
+  
+  .inner-header {
+    height:37vh;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+      margin:0;
+    }
+
+    
+    h1 {
+      font-family: Verdana;
+      text-align: center;
+      font-weight:300;
+      letter-spacing: 2px;
+      font-size:50px;
+    }
+    h2 {
+      font-family: Verdana;
+      text-align: center;
+      font-weight:200;
+      letter-spacing: 1px;
+      font-size:30px;
+      color:black;
+    }
+    p {
+      font-family: Helvetica;
+      letter-spacing: 1px;
+      font-size:18px;
+      color: black;
+    }
+    li {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      letter-spacing: 1px;
+      font-size:14pt;
+      color: black;
+      text-align:justify;
+    }
+    figcaption {
+      font-family: Helvetica;
+      letter-spacing: 1px;
+      font-size:12pt;
+      color: black;
+      text-align:center;
+    }
+    .flex { /*Flexbox for containers*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .waves {
+      position:relative;
+      width: 100%;
+      height:5vh;
+      margin-bottom:-7px; /*Fix for safari gap*/
+      min-height:100px;
+      max-height:150px;
+    }
+    
+    .content {
+      position:relative;
+      height:20vh;
+      text-align:center;
+      background-color: white;
+    }
+    
+    /* Animation */
+    
+    .parallax > use {
+      animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+    }
+    .parallax > use:nth-child(1) {
+      animation-delay: -1s;
+      animation-duration: 8s;
+    }
+    .parallax > use:nth-child(2) {
+      animation-delay: -4s;
+      animation-duration: 9s;
+    }
+    .parallax > use:nth-child(3) {
+      animation-delay: -5s;
+      animation-duration: 12s;
+    }
+    .parallax > use:nth-child(4) {
+      animation-delay: -6s;
+      animation-duration: 29s;
+    }
+    @keyframes move-forever {
+      0% {
+       transform: translate3d(-90px,0,0);
+      }
+      100% { 
+        transform: translate3d(85px,0,0);
+      }
+    }
+    /*Shrinking for mobile*/
+    @media (max-width: 400px) {
+      .waves {
+        height:40px;
+        min-height:40px;
+      }
+      .content {
+        height:30vh;
+      }
+      h1 {
+        font-size:24px;
+      }
+    }
+  /* navigation bar styling */
+  .navbar{
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+  .navbar a{
+    float: left;
+    display: inline;
+    color: #2b2525;
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    transition: 0.3s ease background-color;
+  }
+  .navbar a:hover{
+    background-color: #ffffff;
+    color: #FC4A1A;
+  }
+  .navbar a.active{
+    background-color: #b6c2c2;
+  }
+  
+  /* home styling */
+  .home{
+    background-color: #ffffff;
+    padding: 60px;
+  }
+  
+  /* row styling */
+  .row-2{
+      display: flex;
+      padding-bottom: 20px;
+      max-width: 1000px;
+      margin: auto;
+  }
+  .row-2-left{
+      width: 60%;
+      padding-right: 15px;
+  }
+  .row-2-right{
+      width: 40%;
+      padding-left: 50px;
+  }
+
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .dropdown .dropbtn {
+            float: left;
+    display: inline;
+    background-color: #ffffff;
+    font-family: Calibri;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    border: none;
+    transition: 0.3s ease background-color;
+        }
+
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: #ffffff;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+
+        }
+
+        .dropdown-content a {
+            float: none;
+            background-color: #ccb6b6;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ffffff;;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+          /* hero btn styling */
+  .hero-btn:hover{
+      border: 1px solid #FC4A1A;
+      background: #f9f9f9;
+      transition: 1s;
+  }
+  /* footer styling */
+  .footer{
+      background-color: rgb(255, 0, 0);
+      color: #f9f9f9;
+      font-family: Calibri;
+      padding: 40px 0;
+      text-align: center;
+  }
+    </style>
+
+
+</head>
+<link rel="icon" type="image/x-icon" href="favicon (6).ico">
+<body>
+          <!--Header-->
+          <section class="header">
+<div class="header">
+<div class="inner-header flex">
+    <h1  >BIMBINGAN BELAJAR PAK TEJO</h1>
+    <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xml:space="preserve">
+    <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
+    <div class="fluid">
+    </div>
+    </svg>
+    </div>
+
+    <!--Waves Container (Hasil eksplorasi saya dari berbagai sumber)--> 
+    <div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="14" y="-2" fill="rgba(255,255,255,0.8" />
+    <use xlink:href="#gentle-wave" x="14" y="4" fill="rgba(255,255,255,0.6)" />
+    <use xlink:href="#gentle-wave" x="14" y="8" fill="rgba(255,255,255,0.2)" />
+    <use xlink:href="#gentle-wave" x="14" y="10" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+      <!-- navigation -->
+      <section class="navbar">
+        <div class="navbar">
+            <a href="index_menulengkap08.html">Home</a>
+            <div class="dropdown">
+                <button class="dropbtn">Biologi
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="bioorgansel.html">Organisasi Tingkat Sel</a>
+                    <a href="organisasijaringan.html">Organisasi Tingkat Jaringan</a>
+                    <a href="sistemgerak.html">Sistem Gerak pada Manusia</a>
+                    <a href="peredarandarah.html">Sistem Peredaran Darah pada Manusia</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Sosiologi
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="teorisosial.html">Teori Sosial dan Perspektif Sosiologis</a>
+                    <a href="klmpksosial.html">Kelompok Sosial dan Identitas Sosial</a>
+                    <a href="stratifikasi.html">Stratifikasi Sosial dan Ketidaksetaraan</a>
+                    <a href="prbhnsosial.html">Perubahan Sosial dan Globalisasi</a>
+                </div>
+            </div>
+            <div class="dropdown">
+              <button class="dropbtn">Geografi
+                  <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                  <a href="atmosferklimatologi.html">Sistem Atmosfer dan Klimatologi</a>
+                  <a href="geomorfologi.html">Geomorfologi</a>
+                  <a href="hidrosferoseanografi.html">Hidrosfer dan Oseanografi</a>
+                  <a href="biogeografi.html">Biogeografi</a>
+              </div>
+          </div>
+            <div class="dropdown">
+                <button class="dropbtn">Informatika
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="programdasar.html">Pemrograman Dasar</a>
+                    <a href="strukturdata.html">Struktur Data dan Algoritma</a>
+                    <a href="jaringankomputer.html">Jaringan Komputer dan Keamanan</a>
+                    <a href="pengembanganweb.html">Pengembangan Aplikasi Web</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Kimia
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="strukturatom.html">Struktur Atom dan Sistem Periodik Unsur</a>
+                    <a href="ikatankimia.html">Ikatan Kimia dan Reaksi Kimia</a>
+                    <a href="termokimia.html">Termokimia</a>
+                    <a href="kimialarutan.html">Kimia Larutan</a>
+                </div>
+            </div>
+            <a href="saya.html">Tentang Saya</a>
+        </div>
+    </body>
+</svg>
+</div>
+    <!-- home -->
+    <section class="home">
+        <div class="max-width">
+          <h2>TERMOKIMIA</h2>
+          <img src="kimud.jpg"style="width: 1000px;height: 600px;"> 
+          <figcaption>Sumber : KIM UD</figcaption>
+
+            <p align="justify" ><font style="font-size: 14pt; font-family: Verdana, Geneva, Tahoma, sans-serif; color:rgb(0, 0, 0);">
+                <br>
+                Termokimia membahas tentang perubahan energi dalam reaksi kimia. Terdapat beberapa jenis perubahan energi, seperti entalpi, entropi, dan energi bebas Gibbs.
+     Termokimia juga membahas tentang hukum-hukum termokimia, seperti hukum Hess dan hukum Kirchhoff.
+                <hr class="hline"> 
+  
+    <!-- footer -->
+    <section class="footer">
+        <div class="max-width">
+            <p align ="center"><font style="font-size: 15pt; font-family: Verdana, Geneva, Tahoma, sans-serif; color:rgb(255, 251, 251);"><b>&#169; 2023. Padre Pio Wisnu Amengku Djati</b></p>
+        </div>
+    </section>
+</body>
+</html>
